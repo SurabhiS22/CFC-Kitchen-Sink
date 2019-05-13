@@ -3,7 +3,8 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './App';
+import ListWithEditDelete from './ListWithEditDelete';
+import FormUI from './FormUI';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => ListWithEditDelete);

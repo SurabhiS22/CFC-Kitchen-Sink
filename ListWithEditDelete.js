@@ -7,7 +7,7 @@ import list from './list';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 //import IconSet from 'react-native-vector-icons/Feather';
 
-export default class App extends Component {
+export default class ListWithEditDelete extends Component {
   
   constructor(props) {
     super(props);
@@ -42,12 +42,12 @@ export default class App extends Component {
     
   <Right>
   
-<Item>
 
-<FontAwesome style={{fontSize: 23}} name="trash"/>
-  <FontAwesome style={{fontSize: 23,marginLeft:15}} name="edit"/>
+<View style={styles.icon}>
+  <FontAwesome style={{fontSize: 23}} name="trash"/>
+  <FontAwesome style={{fontSize: 23,marginLeft:6}} name="edit"/>
+</View>
 
-</Item>
   </Right>
   </CardItem>
 </Card>
@@ -88,6 +88,10 @@ color:'black'
     fontSize:17,
 fontFamily:'Cochin',
 
-  }
-  
+  },
+  icon:{
+  flex:1,
+  flexDirection:'row',
+  justifyContent:'space-between'
+}
 });
