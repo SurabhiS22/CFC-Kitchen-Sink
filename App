@@ -1,0 +1,82 @@
+type Props = {};
+export default class App extends Component<Props> {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Login To My APP</Text>
+       
+        <TextInput
+        style={styles.input}
+        placeholder="Username"/>
+        <TextInput
+        style={styles.input}
+        placeholder="Password"
+        secureTextEntry/>
+        <View
+        style={styles.BtnContainer}>
+          
+          <TouchableOpacity
+          style={styles.userBtn}
+          onPress={()=> alert ("Login Works Works)}>
+            <Text style={styles.btnTxt}>Login</Text>
+          
+          
+          </TouchableOpacity>
+          
+          
+          <TouchableOpacity
+          style={styles.userBtn}
+          onPress={()=> alert("Sign Up Works")}>
+            
+         <Text style={styles.btnTxt}>Sign Up</Text>
+
+         </TouchableOpacity>
+          
+          
+        </View>
+       
+      </View>
+    );
+  }
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#1e90ff',
+  },
+  welcome: {
+    
+    textAlign: 'center',
+    margin: 10,
+    color:'#fff',
+    
+  },
+  input:{
+    width:'90%',
+    backgroundColor: '#fff',
+    padding : 15,
+    marginBottom:10
+  },
+
+  BtnContainer:{
+     flexDirection:'row',
+     justifyContent:'space-between',
+     width:90
+  },
+
+  userBtn:{
+    backgroundColor:'#FFD700',
+    padding:15,
+    
+  },
+
+  btnTxt:{
+   fontSize:18,
+   textAlign :"center"
+  }
+
+});
